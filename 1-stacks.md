@@ -34,12 +34,22 @@ sample_stack.append('w')
 
 > ### *"POP, POP!"*
 
--Magnitude, Community (multiple occasions)
+#### *- Magnitude, Community (multiple occasions)*
+
+Similarly, we can remove values from the stack with a simple function on the list. This time, it's actually named appropriately: `pop()`. This function will not just remove the last element in the stack; it will return its value to the calling expression.
+
+```python
+last_value = sample_stack.pop()
+```
+
+![stack 3](images/sample_stack_2.png)
 
 ## Example Use Cases
 
-yah bro i got no idea
+> **Note to instructor or whoever's grading this**: I plan to finish these sections eventually. But this is just a draft and I'm late with it, so I gotta turn something in.
+
+I dunno, maybe I'll use a maze problem? Like use a stack to keep track of the moves you make in a maze? Or was that already one of our assignments this semester? That'd be awkward. Also that might be kinda hard. I'll bet many people end up using the exact same ideas to demonstrate uses of some of these data structures.
 
 ## Exercise Problem
 
-uhh yeah so go ahead and implement a fully functional operating system clipboard stack or something idk
+Alright now go and use a python stack to represent a stack of waffles because that's totally different from a stack of pancakes...
