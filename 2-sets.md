@@ -79,11 +79,11 @@ I am number 30
 
 Because the number of possible values that could be stored in a set is far greater than the number of possible memory locations for those values, there is a possiblity of the hashing process producing an identical index for two different items. This is like two cars with different license plate numbers being issued the same parking pass. There are basically two ways to go about resolving this:
 
-1. When inserting an item that belongs at an index which is already taken, simply assign it the next available slot (usually the next open one to the right). When looking up that particular value, if it is not at the expected index, keep checking the next slots for that value until either the value is found (value successfuly found in the set) or an empty slot is found (value is not in the set).
+* **Method 1**: When inserting an item that belongs at an index which is already taken, simply assign it the next available slot (usually the next open one to the right). When looking up that particular value, if it is not at the expected index, keep checking the next slots for that value until either the value is found (value successfuly found in the set) or an empty slot is found (value is not in the set).
 
 > This would be like telling two car owners who are given identical parking passes that whoever gets there first can use the spot, and whoever gets there second must find the next empty spot.
 
-2. When an index conflict arises while inserting, rather than taking the next available space, utilize **chaining** to store both values at the given index. This would mean storing both values in another data structure (probably a set), then storing that set at the original index rather than either of the items directly.
+* **Method 2**: When an index conflict arises while inserting, rather than taking the next available space, utilize **chaining** to store both values at the given index. This would mean storing both values in another data structure (probably a set), then storing that set at the original index rather than either of the items directly.
 
 > This would be like having a lift system that allows several cars to be parked in the same space, stacked vertically.
 
@@ -117,4 +117,6 @@ while not done:
 
 ## Problem Exercise
 
-Create a program which, using a set, allows the user to record and keep track of which states you've visited.
+Create a program which, using a set, allows the user to record and keep track of which states you've visited. If sets are used correctly, duplicates will be automatically ignored without the need to add code to do so explicitly.
+
+View the solution [here](code/2-solution.py).
