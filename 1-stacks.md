@@ -28,7 +28,7 @@ sample_stack.append('w')
 
 ![stack 2](images/sample_stack_1.png)
 
-> **Note**: while, in Python, you could perform other operations to add data to this list, such as `.insert()` or simply accessing an index like `sample_stack[1] = "Y"` to alter data, this defeats the purpose of a stack. Not only does this ruin the integrity of the data structure, it also means we lose the performance benefit stacks have over lists (we'll talk about this more later). So basically, even though you *could*, don't.
+> **Note**: while, in Python, you could perform other operations to add data to this list, such as `.insert()` or simply accessing an index like `sample_stack[1] = "Y"` to alter data, this defeats the purpose of a stack. Not only does this ruin the integrity of the data structure, it also means we lose the performance benefit stacks have over lists. So basically, even though you *could*, don't.
 
 ### Pop
 
@@ -44,7 +44,7 @@ last_value = sample_stack.pop()
 
 > ### *"POP, POP!"*
 
-#### *- Magnitude, from the tel series Community (multiple occasions)*
+#### *- Magnitude, from the television series Community (multiple occasions)*
 
 ## Example Use Case
 

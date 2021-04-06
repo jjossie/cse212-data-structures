@@ -98,7 +98,7 @@ def contains(root, data):
 
 ## Example Use Case
 
-Let's say you wanted to use a tree to store phone numbers in an address book. Because phone numbers are unique, you could use a binary search tree to store phone numbers and check for membership. Using the three code blocks above as a foundation for our binary search tree, we can add some phone numbers and test if they exist in the tree:
+Let's say you wanted to use a tree to store phone numbers in an address book. Because phone numbers are unique, you could use a binary search tree to store phone numbers and check for membership. Using the three code blocks above as a foundation for our binary search tree, have the user add several phone numbers and check for them using the tree:
 
 ```python
 def get_number():

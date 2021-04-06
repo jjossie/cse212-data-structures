@@ -26,7 +26,6 @@ The first method uses curly braces to declare and initialize values for a set in
 
 ```python
 sample_set = set()
-sample_set.add(10, 20, 30)
 ```
 
 >Curly braces cannot be used to declare an empty set because Python allows curly braces to represent both set *and* dictionary literals, and an emtpy pair of curly braces defaults to representing an empty dictionary rather than a set.
