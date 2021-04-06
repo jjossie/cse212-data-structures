@@ -14,13 +14,13 @@ sample_stack = ['z', 'y', 'x']
 
 ## Regular Operations
 
-Stacks' operations are more restricted than lists. While you can add values to the beginning of a dynamic array, you can only add and remove elements from the end of a stack.
+Stacks' operations are more restricted than lists. While you can add values to the beginning of a dynamic array, you can only add and remove elements from the end of a stack. In other words, stacks have only a single access point for regular read/add/remove data operations. To insert a new element, we **push** to the back of the stack. To remove the topmost element, we **pop** from the back of the stack. The back, therefore is the singular point of access to the data structure.
 
-Stacks are different from most data structures in that they have only a single access point for regular read/add/remove data operations. To insert a new element, we **push** to the back of the stack. To remove the topmost element, we **pop** from the back of the stack. The back, therefore is the singular point of access to the data structure.
+While this may seem like a disadvantage, it does come with a significant benenfit: every operation on a stack is O(1) performance. This is because the last index of the list being used to store the stack can be determined with a simple `len(sample_stack) - 1`, at which point a lookup from a list at a given index is also a simple O(1) operation. No searching or extra processing is needed to add an element to the back of a stack or to remove the last element from it. With our example above, the index `2` would be the back of the stack.
 
 ### Push
 
-In python, we can push an element onto a stack with the simple `append()` function.
+In python, we can push an element onto a stack with the simple `append()` function. Python automatically knows that `2` is effectively the back of the stack and the next element should be inserted at index `3`.
 
 ```python
 sample_stack.append('w')
@@ -32,11 +32,9 @@ sample_stack.append('w')
 
 ### Pop
 
-> ### *"POP, POP!"*
-
-#### *- Magnitude, Community (multiple occasions)*
-
 Similarly, we can remove values from the stack with a simple function on the list. This time, it's actually named appropriately: `pop()`. This function will not just remove the last element in the stack; it will return its value to the calling expression.
+
+As with `.append()`, Python knows that `3` is the back of the stack and will remove the element at that index.
 
 ```python
 last_value = sample_stack.pop()
@@ -44,12 +42,29 @@ last_value = sample_stack.pop()
 
 ![stack 3](images/sample_stack_2.png)
 
-## Example Use Cases
+> ### *"POP, POP!"*
 
-> **Note to instructor or whoever's grading this**: I plan to finish these sections eventually. But this is just a draft and I'm late with it, so I gotta turn something in.
+#### *- Magnitude, from the tel series Community (multiple occasions)*
 
-I dunno, maybe I'll use a maze problem? Like use a stack to keep track of the moves you make in a maze? Or was that already one of our assignments this semester? That'd be awkward. Also that might be kinda hard. I'll bet many people end up using the exact same ideas to demonstrate uses of some of these data structures.
+## Example Use Case
+
+Say we wanted a program that would reverse any text the user types. It could look like this:
+
+```python
+stack = []
+phrase = input("Enter a word or phrase: ")
+for char in phrase:
+    stack.append(char)
+
+reversed_phrase = ""
+for i in range(0, len(stack)):
+    reversed_phrase += stack.pop()
+
+print(reversed_phrase)
+```
 
 ## Exercise Problem
 
-Alright now go and use a python stack to represent a stack of waffles because that's totally different from a stack of pancakes...
+Write a program using a stack that will allow the user to write words and phrases one after another, and will print back the last phrase from the history when they type "undo".
+
+View a possible solution [here](code/1-solution.py).
